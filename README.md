@@ -1,1 +1,1 @@
-https://hank-del-on.github.io/Cv/mainCv.html
+https://hank-del-on.github.io/Cv2/mainCv.html
