@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Profile.css" />
+    <link rel="icon" href="../Icon folder/pixel4.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono"
+      rel="stylesheet"
+    />
+    <title>Profiling</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="profile.js" defer></script>
+    <style>
+      body {
+        background-color: #646d72;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id="bg"></canvas>
+    <main id="content">
+      <h1>
+        <div class="hex moved"></div>
+        <span>About the Person</span>
+      </h1>
+      <div class="subtext" id="main">
+        <p>
+          Navnet er hen (forkortelse for hen eller hen, avhengig av hvor du
+          kjenner meg fra). Jeg er en 28 år gammel Norther-student med en
+          bortkastet bakgrunn og mye å si om retningen til samtiden.
+        </p>
+        <p>about that, <br /></p>
+      </div>
+      <h2>
+        <div class="hex"></div>
+        <span>Skills</span>
+      </h2>
+      <div class="subtext coll">
+        En god forståelse av objektorientert programmering og datarelatert
+        matematikk som helhet. Beherske CSS3 og HTML5; gjør betydelige inngrep
+        inn i JavaScript og ikke JQuery ennå. Adobe Illustrator er ikke morsomt
+        for meg og medlidenhet i hendene mine. <i>Pitty.</i> I tillegg til min
+        kunnskap av koding snakker jeg også seks menneskelige språk og er i ferd
+        med lære noen flere.
+      </div>
+      <h2>
+        <div class="hex"></div>
+        <span>Hobbies & Interests</span>
+      </h2>
+      <div class="subtext coll">
+        Vandring, skriving, fotografi, kryptografi, kalligrafi, psykologi
+        sosiologi, fotografi, teknologi, reparasjon, vedlikehold.
+      </div>
+      <h2>
+        <div class="hex"></div>
+        <span>Currently Working On</span>
+      </h2>
+      <div class="subtext coll">Læring av programering og web utvikling</div>
+      <h2>
+        <div class="hex"></div>
+        <span>Find You Me</span>
+      </h2>
+      <div class="subtext coll">
+        <a href="#">Twitter</a> | <a href="#">Tumblr</a> |
+        <a href="#">Codepen</a> | <a href="#">Behance</a>
+      </div>
+      <h2>
+        <div class="hex"></div>
+        <span>Contact Me</span>
+      </h2>
+      <div class="subtext coll">
+        <ul>
+          <li>Phone: 34443232</li>
+          <li>
+            E-mail:
+            <a href="mailto:hankhankkodehode@gmail.com"
+              >hankhankkodehode@gmail.com</a
+            >
+          </li>
+          <li>Discord: <a href="#">dsf</a></li>
+        </ul>
+      </div>
+    </main>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="one">
+      <path
+        d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="two">
+      <path
+        d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"
+      ></path>
+    </svg>
+    <div id="hex-holder">
+      <div class="hex" id="uno"></div>
+      <div class="hex" id="dos"></div>
+      <div class="hex" id="tres"></div>
+    </div>
+  </body>
+</html>
