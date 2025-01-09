@@ -1,43 +1,24 @@
-function draw() {
-  var canvas = $("canvas")[0];
-  if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "rgb(120, 0, 0)";
-    ctx.fillRect(10, 10, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(30, 30, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(70, 30, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(90, 30, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(120, 30, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(170, 50, 50, 50);
-    ctx.fillStyle = "rgba(0, 0, 0, 43.5)";
-    ctx.fillRect(190, 60, 120, 190);
-    ctx.fillStyle = "rgba(0, 0, 10, 1.5)";
-    ctx.fillRect(0, 60, 190, 190);
-  }
+var player;
+
+// This function creates an <iframe> (and YouTube player)
+// after the API code downloads.
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "360",
+    width: "240",
+    videoId: "tPEE9ZwTmy0", // YouTube video ID
+    events: {
+      onReady: onPlayerReady,
+    },
+  });
 }
 
-$(document).ready(function () {
-  // $(document).draw();
-  $("#content").animate(
-    {
-      opacity: 2,
-      marginTop: "0",
-    },
-    200000
-  );
-  $("h2").click(function () {
-    $(this).next(".subtext").slideToggle("fast");
-    $(this).children(".hex").toggleClass("moved");
-  });
-});
+function onPlayerReady(event) {
+  // This function will be called when the player is ready.
+}
 
-// if (confirm("Press a button!")) {
-//   txt = "You pressed OK!";
-// } else {
-//   txt = "You pressed Cancel!";
-// }
+function handleButtonClick() {
+  var playerDiv = document.getElementById("player");
+  playerDiv.style.display = "block"; // Show the player
+  player.playVideo(); // Start playing the video
+}
